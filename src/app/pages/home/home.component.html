@@ -1,3 +1,20 @@
-<h2>Dashboard</h2>
 <p>Voici une visualisation des médailles de différents pays lors des jeux olympiques précédents !</p>
-<app-dashboard></app-dashboard>
+<div>
+    <h3>Medals per country</h3>
+    @if (olympicData) {
+    <div class="listNumberOf">
+        <p class="numberOf">Number of JOs <br> <strong>{{
+                getUniqueYearsCount(olympicData) }}</strong></p>
+        <p class="numberOf">Number of countries <br> <strong>{{ getCountryCount(olympicData) }}</strong></p>
+    </div>
+    }
+</div>
+
+<div>
+    @if (olympicData) {
+    <ngx-charts-pie-chart [results]="getCountryMedals(olympicData)" [labels]="showLabels" [doughnut]="isDoughnut"
+        [animations]="animation" [maxLabelLength]="maxLabelLength" [tooltipDisabled]="tooltipDisabled"
+        [tooltipText]="getTooltipText" (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+    }
+</div>
