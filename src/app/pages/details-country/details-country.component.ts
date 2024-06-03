@@ -16,7 +16,9 @@ export class DetailsCountryComponent implements OnInit {
   countryName: string | null;
   barChartData: { name: string, value: number }[] | undefined;
   subscription!: Subscription;
-
+  totalParticipations: number = 0;
+  totalMedals: number = 0;
+  totalAthletes: number = 0;
 
   constructor(private route: ActivatedRoute, private olympicsService: OlympicsService) {
     this.countryName = this.route.snapshot.paramMap.get('countryName');
@@ -25,10 +27,16 @@ export class DetailsCountryComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.olympicsService.getOlympicData().subscribe((data: CountryParticipation[]) => {
       const countryData = data.find(item => item.country === this.countryName);
-      this.barChartData = countryData?.participations.map(participation => ({
-        name: participation.year.toString(),
-        value: participation.medalsCount
-      }));
+
+      if (countryData) {
+        this.barChartData = countryData.participations.map(participation => ({
+          name: participation.year.toString(),
+          value: participation.medalsCount
+        }));
+        this.totalParticipations = countryData.participations.length;
+        this.totalMedals = this.olympicsService.getTotalMedals(countryData.participations);
+        this.totalAthletes = this.olympicsService.getTotalAthletes(countryData.participations);
+      }
     });
   }
 

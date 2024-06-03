@@ -17,7 +17,6 @@ import { TooltipData } from '../../models/TooltipData';
 })
 export class HomeComponent implements OnInit, OnDestroy { //dans angular 18 il est inutile d'implémenter OnInt et OnDestroy
   olympicData!: CountryParticipation[];
-
   view: [number, number] = [700, 400];
   gradient: boolean = true;
   showLegend: boolean = true;
@@ -42,25 +41,19 @@ export class HomeComponent implements OnInit, OnDestroy { //dans angular 18 il e
   }
 
   getTooltipText(data: TooltipData): string {
-    console.log(data);
     return `${data.data.name} <br> <i class="fa-solid fa-medal"></i> <strong>${data.data.value}</strong>`;
   }
 
   getCountryMedals(data: CountryParticipation[]): { name: string, value: number }[] {
-    return data.map(country => ({
-      name: country.country,
-      value: country.participations.reduce((acc, p) => acc + p.medalsCount, 0)
-    }));
+    return this.olympicsService.getCountryMedals(data);
   }
 
   getUniqueYearsCount(data: CountryParticipation[]): number {
-    const years = data.flatMap(country => country.participations.map(participation => participation.year));
-    const uniqueYears = [...new Set(years)];
-    return uniqueYears.length;
+    return this.olympicsService.getUniqueYearsCount(data);
   }
 
   getCountryCount(data: CountryParticipation[]): number {
-    return data.length
+    return this.olympicsService.getCountryCount(data);
   }
 
   onSelect(data: { name: string }): void {
