@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { OlympicsService } from '../../services/olympics.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CountryParticipation } from '../../models/Olympics';
@@ -20,7 +20,7 @@ export class DetailsCountryComponent implements OnInit {
   totalMedals: number = 0;
   totalAthletes: number = 0;
 
-  constructor(private route: ActivatedRoute, private olympicsService: OlympicsService) {
+  constructor(private route: ActivatedRoute, private router: Router, private olympicsService: OlympicsService) {
     this.countryName = this.route.snapshot.paramMap.get('countryName');
   }
 
@@ -37,7 +37,11 @@ export class DetailsCountryComponent implements OnInit {
         this.totalMedals = this.olympicsService.getTotalMedals(countryData.participations);
         this.totalAthletes = this.olympicsService.getTotalAthletes(countryData.participations);
       }
+      else {
+        this.router.navigate(['/not-found']);
+      }
     });
+
   }
 
   ngOnDestroy(): void {
