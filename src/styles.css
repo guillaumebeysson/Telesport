@@ -25,6 +25,7 @@ h3 {
 }
 
 .numberOf {
+    text-align: center;
     margin: 20px;
     padding: 10px;
     border: solid 2px #04838F;
