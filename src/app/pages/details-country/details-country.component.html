@@ -1,4 +1,12 @@
 <h3>{{ countryName }}</h3>
+@if(barChartData){
+<ngx-charts-bar-vertical [results]="barChartData" [xAxis]="true" [yAxis]="true" [legend]="false" [showXAxisLabel]="true"
+    [showYAxisLabel]="true" [xAxisLabel]="'Year'" [yAxisLabel]="'Medals'"></ngx-charts-bar-vertical>
+}
+@else {
+<p>No medals data available for {{ countryName }}.</p>
+}
+
 <div class="back">
-    <a routerLink="">View all countries</a>
+    <a routerLink="">Back to all countries view</a>
 </div>

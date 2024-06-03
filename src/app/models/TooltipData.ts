@@ -1,4 +1,7 @@
 export interface TooltipData {
-    name: string;
-    value: number;
+    data: {
+        name: string;
+        value: number;
+        label: string;
+    };
 }

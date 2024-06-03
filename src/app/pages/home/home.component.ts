@@ -4,6 +4,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { Router } from '@angular/router';
 import { CountryParticipation } from '../../models/Olympics';
 import { OlympicsService } from '../../services/olympics.service';
+import { TooltipData } from '../../models/TooltipData';
 
 
 @Component({
@@ -40,7 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy { //dans angular 18 il e
     this.subscription.unsubscribe();
   }
 
-  getTooltipText(data: any): string {
+  getTooltipText(data: TooltipData): string {
     console.log(data);
     return `${data.data.name} <br> <i class="fa-solid fa-medal"></i> <strong>${data.data.value}</strong>`;
   }
@@ -63,7 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy { //dans angular 18 il e
   }
 
   onSelect(data: { name: string }): void {
-    this.router.navigateByUrl(`/${data.name}`)
+    this.router.navigateByUrl(`/country-details/${data.name}`)
   }
 
 }
