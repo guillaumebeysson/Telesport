@@ -1,28 +1,73 @@
-# OlympicGames
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
+# Olympic Games
 
-Don't forget to install your node_modules before starting (npm install).
+This Angular application visualizes Olympic Games data, providing insights into various countries' participations, medals, and athletes.
 
-## Development server
+## Technologies Used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 18
+- Typescript
+- RxJS
+- Ngx-Charts: For creating interactive charts
 
-## Code scaffolding
+## Functionality
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The application consists of two main components:
 
-## Build
+1. **HomeComponent**: Displays a chart of participating countries medals. Users can select a country to view more details.
+2. **DetailsCountryComponent**: Shows detailed information about the selected country's participation in the Olympics, including a chart of medals won over the years, as well as statistics on the number of participations, medals, and athletes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Running the Application
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ensure you have the following installed:
 
-## Running end-to-end tests
+- Node.js (https://nodejs.org/)
+- Angular CLI (https://angular.io/cli)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Steps
 
-## Further help
+1. Clone the repository:
+   
+   `git clone https://github.com/guillaumebeysson/Telesport.git`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. Install dependencies:
+    `npm install`
+
+3. Start the development server:
+    `ng serve`
+
+## Project structure
+
+├── public/
+│   ├── mock
+│   │   ├── olympic.json
+├── src/
+│   ├── app/
+│   │   ├── models/
+│   │   │   ├── CountryParticipation.ts
+│   │   │   ├── Participation.ts
+│   │   │   ├── TooltipData.ts
+│   │   ├── pages/
+│   │   │   ├── header
+│   │   │   │   ├── header.component.ts
+│   │   │   │   ├── header.component.html
+│   │   │   │   ├── header.component.css
+│   │   │   ├── home/
+│   │   │   │   ├── home.component.ts
+│   │   │   │   ├── home.component.html
+│   │   │   │   ├── home.component.css
+│   │   │   ├── details-country/
+│   │   │   │   ├── details-country.component.ts
+│   │   │   │   ├── details-country.component.html
+│   │   │   │   ├── details-country.component.css
+│   │   ├── services/
+│   │   │   ├── olympics.service.ts
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.css
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   ├── index.html
+│   ├── main.ts
+│ 
