@@ -1,6 +1,7 @@
 # OlympicGames
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
+
+Don't forget to install your node_modules before starting (npm install).
 
 ## Development server
 
