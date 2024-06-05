@@ -1,0 +1,18 @@
+<h3>{{ countryName }}</h3>
+
+@if(barChartData){
+<div class="listNumberOf">
+    <p class="numberOf">Number of entries <br> <strong>{{ totalParticipations }}</strong></p>
+    <p class="numberOf">Total number medals <br> <strong>{{ totalMedals }}</strong></p>
+    <p class="numberOf">Total number of athletes <br> <strong>{{ totalAthletes }}</strong></p>
+</div>
+<div>
+    <ngx-charts-bar-vertical [results]="barChartData" [xAxis]="true" [yAxis]="true" [animations]="true" [legend]="false"
+        [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxisLabel]="'Year'"
+        [yAxisLabel]="'Medals'"></ngx-charts-bar-vertical>
+</div>
+}
+
+<div class="back">
+    <a routerLink="/">Back to all countries view</a>
+</div>

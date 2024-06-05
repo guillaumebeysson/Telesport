@@ -1,0 +1,33 @@
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    background-color: #04838F;
+    width: fit-content;
+    margin: 10px auto;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.listNumberOf {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.numberOf {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border: solid 2px #04838F;
+    border-radius: 10px;
+}
