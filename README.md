@@ -39,35 +39,35 @@ Ensure you have the following installed:
 
 ## Project structure
 
-├── public/
-│   ├── mock
-│   │   ├── olympic.json
-├── src/
-│   ├── app/
-│   │   ├── models/
-│   │   │   ├── CountryParticipation.ts
-│   │   │   ├── Participation.ts
-│   │   │   ├── TooltipData.ts
-│   │   ├── pages/
-│   │   │   ├── header
-│   │   │   │   ├── header.component.ts
-│   │   │   │   ├── header.component.html
-│   │   │   │   ├── header.component.css
-│   │   │   ├── home/
-│   │   │   │   ├── home.component.ts
-│   │   │   │   ├── home.component.html
-│   │   │   │   ├── home.component.css
-│   │   │   ├── details-country/
-│   │   │   │   ├── details-country.component.ts
-│   │   │   │   ├── details-country.component.html
-│   │   │   │   ├── details-country.component.css
-│   │   ├── services/
-│   │   │   ├── olympics.service.ts
-│   │   ├── app.component.ts
-│   │   ├── app.component.html
-│   │   ├── app.component.css
-│   │   ├── app.config.ts
-│   │   ├── app.routes.ts
-│   ├── index.html
-│   ├── main.ts
+├── public/ 
+│   ├── mock    
+│   │   ├── olympic.json    
+├── src/    
+│   ├── app/    
+│   │   ├── models/ 
+│   │   │   ├── CountryParticipation.ts     
+│   │   │   ├── Participation.ts    
+│   │   │   ├── TooltipData.ts  
+│   │   ├── pages/  
+│   │   │   ├── header  
+│   │   │   │   ├── header.component.ts     
+│   │   │   │   ├── header.component.html   
+│   │   │   │   ├── header.component.css    
+│   │   │   ├── home/   
+│   │   │   │   ├── home.component.ts   
+│   │   │   │   ├── home.component.html     
+│   │   │   │   ├── home.component.css  
+│   │   │   ├── details-country/    
+│   │   │   │   ├── details-country.component.ts    
+│   │   │   │   ├── details-country.component.html  
+│   │   │   │   ├── details-country.component.css   
+│   │   ├── services/   
+│   │   │   ├── olympics.service.ts     
+│   │   ├── app.component.ts    
+│   │   ├── app.component.html  
+│   │   ├── app.component.css   
+│   │   ├── app.config.ts   
+│   │   ├── app.routes.ts   
+│   ├── index.html  
+│   ├── main.ts     
 │ 
