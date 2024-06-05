@@ -71,4 +71,3 @@ Ensure you have the following installed:
 │   ├── index.html
 │   ├── main.ts
 │ 
->>>>>>> master
