@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Telesport
-=======
 # Olympic Games
 
 This Angular application visualizes Olympic Games data, providing insights into various countries' participations, medals, and athletes.
