@@ -39,12 +39,12 @@ Ensure you have the following installed:
 
 ## Project structure
 
-├── public/ 
-│   ├── mock    
+├── public/     
+│   ├── mock       
 │   │   ├── olympic.json    
-├── src/    
+├── src/      
 │   ├── app/    
-│   │   ├── models/ 
+│   │   ├── models/     
 │   │   │   ├── CountryParticipation.ts     
 │   │   │   ├── Participation.ts    
 │   │   │   ├── TooltipData.ts  
