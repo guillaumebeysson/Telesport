@@ -84,4 +84,5 @@ export class HomeComponent implements OnInit, OnDestroy { //dans angular 18 il e
     this.router.navigateByUrl(`/country-details/${data.name}`)
   }
 
+
 }
