@@ -16,5 +16,15 @@
 }
 
 #number {
-    font-size: 4em;
+    font-size: 2em;
+}
+
+a {
+    font-size: medium;
+    color: white;
+    text-decoration: none;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
 }
